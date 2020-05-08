@@ -26,7 +26,13 @@ const url='http://api.weatherstack.com/current?access_key=a6d75a65f4c704c47903dc
        }else{
             callback(undefined,{
                 temperature:response.body.current.temperature
-                ,humidity:response.body.current.humidity
+                ,humidity:response.body.current.humidity,
+                summary:response.body.current.weather_descriptions,
+                precipitation:response.body.current.precip,
+                cloudcover:response.body.current.cloudcover,
+                feelslike:response.body.current.feelslike
+                ,uv:response.body.current.uv_index,
+                visibility:response.body.current.visibility
 
             })
        }
