@@ -55,12 +55,12 @@ app.get('/weather', (req, res) => {
             const lat=data.latitude.toString()
             const long=data.longitude.toString()
             const location=data.location.toString()
-             forecast(lat,long,(error,{temperature,summary,precipitation,humidity,cloudcover,feelslike,uv_index,visibility}={})=>{
+             forecast(lat,long,(error,{temperature,summary,precipitation,humidity,cloudcover,feelslike,uv,visibility}={})=>{
                  if(error){
                      console.log(error)
                  }else{
                     res.send({
-                        location,temperature,summary,precipitation,humidity,cloudcover,feelslike,uv_index,visibility
+                        location,temperature,summary,precipitation,humidity,cloudcover,feelslike,uv,visibility
    
                     })
                  }
